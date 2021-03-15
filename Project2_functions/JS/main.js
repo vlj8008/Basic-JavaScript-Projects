@@ -4,7 +4,7 @@ function fontColorChangeFunction() { // Function 1 : Defining the function and c
     document.getElementById("blue_text").innerHTML=result; 
 }// // The document.getElementByID finds the element in the HTML document that has
     // the ID name "blue_text". This elememnt is "Click me!" (the text inside the button). The .innerHTML modifies this text, and changes it to whatever the result variable equals which is the string "This text
-    //is now blue" in the blue font.
+    //is now blue" in the blue font..
 
 
 
