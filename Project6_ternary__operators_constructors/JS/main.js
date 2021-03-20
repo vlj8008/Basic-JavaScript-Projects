@@ -57,8 +57,8 @@ function outputFunction(){
 
 //Reserved Keyword Challenge
 
-var true = "twenty three";
-console.log("true"); // when I checked the console I got the message "Uncaught syntax error. Unexpected token 'true'.
+//var true = "twenty three";
+//console.log("true"); // when I checked the console I got the message "Uncaught syntax error. Unexpected token 'true'.
 // A token is a single element in a programming language. So the token "true" caused an error. 
 
 //Object Constructor Function
@@ -88,3 +88,16 @@ function count_Function(){ //name of function
 }
 
 //My Nested Function example
+
+function decrement_Function(){
+    document.getElementById("Nested_Function").innerHTML = Decrement();
+
+    function Decrement(){
+        var Start = 22;
+
+        function Minus_one(){Start -= 2; }
+        Minus_one();
+        Minus_one();
+        return Start;
+    }
+}
