@@ -27,8 +27,9 @@ showSlides(slideIndex); //calling the "showSlides" function with the parameter s
 //Next/previous controls
 
 function plusSlides(n){ //naming a function "plusSlides" and defining a parameter "n". The event for this function is when the "next" symbol in the HTML doc is clicked.  
-showSlides(slideIndex += n); // This part of the function (between the curly brackets) tells the computer what code to be executed. It will call the "showSlide" function, 
-//meaning it will go to the next image. (+= means add one to the n value).
+showSlides(slideIndex += n);
+ // This part of the function (between the curly brackets) tells the computer what code to be executed. It will call the "showSlide" function, 
+}//meaning it will go to the next image. (+= means add one to the n value).
 
 // Dot controls
 function currentSlide(n){ // naming a function "current slide" and giving it a parameter of "n". The event for this function is when the dot symbol in the HTML doc is clicked. 
@@ -36,7 +37,7 @@ function currentSlide(n){ // naming a function "current slide" and giving it a p
 }
 
 
-function showSlides(n){ //naming a function "showSlides"
+function showSlides(n){ //naming a function "showSlides" and assigning a parameter "n"
 
 var i; //declaring a variable called "i"
 
@@ -44,12 +45,13 @@ var slides= document.getElementsByClassName("mySlides"); //assigning a value to 
 
 var dots = document.getElementsByClassName("dot"); //assigning a value to the variable called "dots" by going to the HTML document and getting the element that has the class name "dot".
 
-if (n > slides.length){slideIndex = 1} // if slide number (n) is greater than the total number of slides (slide length), 
+if (n > slides.length){slideIndex = 1} // if slide number (n) is greater than the total number of slides (slide length) make the slide equal to 1 again.
 
-if (n < 1) {slideIndex = slides.length} // if slide number is less than total number of slides.
+if (n < 1) {slideIndex = slides.length} // if slide number is less than 1, make the slide number equal 3 (the slide length).
 
-for (i = 0; i < slides.length; i++){ // hide each of the slides
-    slides[i].style.display = "none";
+for (i = 0; i < slides.length; i++){ // "for" loop. The "i = 0" sets a variable before the loop starts. The "i < slide.length" defines a condition. Meaning the "i" has to be less than 3. The "i++" means to increment
+// the variable by 1 each time code block below has been executed. 
+    slides[i].style.display = "none"; //don't display the slide with the corresponding value "i" 
 }
 
 for (i = 0; i < dots.length; i++){ // replace each of the dots with the class "active" with ""
