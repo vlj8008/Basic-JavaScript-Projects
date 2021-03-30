@@ -103,20 +103,31 @@ function returnFunction() {
 }
 document.getElementById("return").innerHTML = returnFunction();
 //Example 2
-function myreturnFunction(name){
-    return "Hello " + name; 
+function myreturnFunction(name) {
+    return "Hello " + name;
 }
-    
-document.getElementById("return2").innerHTML=myreturnFunction("Vicky Lee Jones");
+
+document.getElementById("return2").innerHTML = myreturnFunction("Vicky Lee Jones");
+
+//Break statement
+
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("break").innerHTML = text;
+
 
 //Creating object using "let" keyword and including properties and a method
 
-let horse={ //this "let" variable has global scope because declared outside the function, so means this variable can be accessed from anywhere
-// in the program. 
+let horse = { //this "let" variable has global scope because declared outside the function, so means this variable can be accessed from anywhere
+    // in the program. 
     breed: "Welsh", //Key value pair
     color: "brown",
     DOB: "1996",
-    description: function(){// this is a method as it is an action performed on the object. 
+    description: function () {// this is a method as it is an action performed on the object. 
         return "This horse is a " + this.breed + " and was born in " + this.DOB + " . It is a " + this.color + " color.";
     }
 
