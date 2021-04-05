@@ -1,0 +1,29 @@
+.center-container{
+    width: 608px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+table{
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+td{
+    cursor:pointer;
+    border: 4px solid rgba(223, 3, 252, 0.8);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+canvas{
+    position:absolute;
+    z-index: 10;
+    pointer-events: none; /* sets whether or not an element should react to a pointer event. 
+    In otherwords, while in the canvas (and not in the table elements), the pointer should not react as it is set to "none".*/
+}
+
+h1{
+    text-align: center;
+}

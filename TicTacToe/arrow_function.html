@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <button onclick="concat()">Click here to see concatenation function working</button>
+
+    <p id="demo"></p>
+
+
+    <p id="displayCar"></p>
+
+    <p id="helloWorld"></p>
+
+    <p id="helloWorld1"></p>
+
+    <p id="helloWorld2"></p>
+
+    <p id="helloUni"></p>
+
+    <p id="helloUni2"></p>
+
+    <p id = "displayAge"></p>
+
+    <script>
+
+
+
+        function concat() {
+            var x = "Hello, ";
+            var y = "I hope you are having a great day";
+            var res = x.concat(y);
+            document.getElementById("demo").innerHTML = res;
+
+
+        }
+
+        var car;
+        car = (val) => "These are my favourite car brands: " + val;
+        document.getElementById('displayCar').innerHTML = car("Honda, Ford, Nissan");
+
+        car = function () {
+            var val = "Honda, Ford, Nissan";
+            return "These are my favourite car brands " + val;
+        }
+
+        // Normal use of functions:
+
+        var hello;
+
+        hello = function () {   // assigning a variable without the VAR keyword. This is not recommended as scope of variables declared without "var"
+            // keyword become global, irrespective of where it is declared. Global variables can be accessed from anywhere in the web page. 
+            return "Hello world ";
+        }
+
+        document.getElementById("helloWorld").innerHTML = hello();
+
+        //Using the arrow function:
+
+        // Drop the Function keyword. If you use the arrow (=>) function JS knows it is a function.
+
+
+        hello2 = () => {
+            return "Hello world number 2 using arrow function  ";
+        }
+        document.getElementById("helloWorld1").innerHTML = hello2();
+
+        // If function has only one statement (instruction to the computer), and the statement returns a value, you can remove the curly brackets and the "return" keyword.
+
+        hello3 = () => "Hello world number 3 dropping curly brackets and return keyword.";
+
+        document.getElementById("helloWorld2").innerHTML = hello3();
+
+        //Functions with parameters. 
+
+        function tellFortune(jobTitle, numKids) { //defining function with parameters
+            var future = 'You will be a ' + jobTitle +  ' with ' + numKids + ' kids.';
+            console.log(future); // display the variable "future" in to the console log. 
+        }
+
+        tellFortune('bball player', 3); //call the function "tellFortune" and pass the two arguments. 
+
+        //Another example with parameters
+
+        function calDogAge(age){ //defining function including parameter (which can be left blank)
+            var dogYears = 'Your dog is ' +  7*age; //declaring variable called dogYears
+            console.log(dogYears); //telling computer to log to the console. 
+        }
+
+        calDogAge(2); //passing argument. Output 14
+        calDogAge(17); //passing second argument. Output 119
+
+        //Another function with parameters
+
+        function helloUni(val){ //naming the function and giving it a parameter
+            var phrase = 'Hello ' + val; //assigning a value to the variable "phrase"
+            document.getElementById("helloUni").innerHTML = phrase;
+
+        }
+
+        helloUni('Mars'); //calling the function with the parameter "Mars". Output is "Hello Mars"
+
+
+        //Above example using arrow function
+
+        var helloUni;//declaring the variable
+
+        helloUni = (val) => "hello " + val; //dropping the "Function" keyword and the curly brackets. 
+        document.getElementById("helloUni").innerHTML = helloUni('Jupiter');
+
+        //Another example using arrow function
+
+        helloUni2 = val2 => "hello " + val2; //dropping the "Function" keyword and the curly brackets and the parenthesis. 
+        document.getElementById("helloUni2").innerHTML = helloUni('Moon');
+
+        //some() function
+
+        var ages = [2, 10, 18,20, 13, 15, 30];
+
+        var someOver18 = ages.some(myFunction);
+
+        document.getElementById('displayAge').innerHTML = "Some over 18 is " + someOver18;
+
+        function myFunction(value, index, array){
+            return value> 31;
+            
+        }
+
+        
+    
+        
+
+
+        
+
+
+
+
+       
+
+
+    </script>
+
+</body>
+
+</html>
