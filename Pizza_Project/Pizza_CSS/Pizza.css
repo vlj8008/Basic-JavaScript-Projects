@@ -1,5 +1,5 @@
 
-#menuBG{
+#menuBG{ /*the # symbol selects the html element with the ID "menuBG*/
     width: 400px;
     height: 470px;
     margin: 10px auto;
@@ -14,10 +14,16 @@
     width: 200px;
     height: 190px;
     margin: 0 auto;
-    float: right;
+    float: right; /*element floats to the right of its container*/
 }
 
 .left{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.center{
     width: 200px;
     height: 200px;
     float: left;
@@ -45,6 +51,7 @@
     margin: 10px 0px 0px 100px;
     width: 100px;
     height: 40px;
+    display: block;
 }
 
 body{

@@ -2,8 +2,14 @@
 <html lang="en">
 	<head>
 		<title> Pizza Drill  </title>
-        <META http-equiv="Content-Type" content="text/html; charset= UTF-8">
-		<meta content = "width=device-width, initial-scale=1.0" name="viewport">
+
+        <!-- metadata is data about the data and is used by browsers. It is not displayed on the page-->
+        <!--"http-equiv" stands for "http equivalent". It allows  you to specify the media type (ie text.html) and the 
+        character set (UTF - 8). This is important in ensuring that the page displays correctly in all browsers.-->
+        <meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+        <!--the "name" attribute specifies the name for the metadata. The value "viewport" controls the 
+        users visible area on the webpage. The width of the page will be the width of the users device -->
+		<meta  name="viewport" content = "width=device-width, initial-scale=1.0">
         <script src="Pizza_JavaScript/Pizza.js" defer></script>
         <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css"/>
                          
@@ -31,6 +37,21 @@
 
                     <input class="size" type="radio" name="Size"
                     value="Extra Large Pizza">Extra Large Pizza<br>
+                </div>
+
+                <div class="menu center">
+
+                    <h3>Vegetables</h3>
+
+                    <input class="toppings" type ="checkbox" name="Topping"
+                    value="Olives">Olives<br>
+
+                    <input class="toppings" type ="checkbox" name="Topping"
+                    value="Dried Tomatoes">Dried Tomatoes<br>
+
+                    <input class="toppings" type ="checkbox" name="Topping"
+                    value="Egg Plant">Egg Plant<br>
+
                 </div>
 
                 <div class="menu right">
